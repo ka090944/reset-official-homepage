@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RESET｜パーソナルトレーニング</title>
+<meta name="description" content="RESETは札幌の大通・麻生を拠点とするパーソナルトレーニングサービスです。90日間で身体づくりの知識と習慣を身につけ、自分自身で身体を管理できる未来へ。">
+<style>
+:root {
+  --black: #101010;
+  --gold: #c5a46d;
+  --white: #f5f2ec;
+  --gray: #aaa49a;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  line-height: 1.9;
+}
+a { color: inherit; text-decoration: none; }
+header {
+  height: 76px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #292929;
+}
+.logo {
+  font-family: Georgia, serif;
+  font-size: 29px;
+  letter-spacing: 5px;
+  color: var(--gold);
+}
+nav { display: flex; gap: 30px; font-size: 12px; color: #ddd; }
+.hero {
+  min-height: 650px;
+  padding: 120px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(90deg, #101010 0%, #101010e8 55%, #10101080 100%),
+  url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(44px, 7vw, 82px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  margin: 20px 0;
+}
+.hero h1 span { color: var(--gold); }
+.hero p { color: #ccc; font-size: 15px; }
+.gold-line { width: 55px; height: 1px; background: var(--gold); margin: 25px 0; }
+.button {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 25px;
+  padding: 13px 34px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+.button:hover { background: var(--gold); color: #111; }
+section { padding: 100px 10%; }
+.section-title {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 0 0 8px;
+}
+.section-sub { color: var(--gray); font-size: 11px; letter-spacing: 3px; margin-bottom: 45px; }
+.intro { background: #171717; }
+.intro-text { max-width: 720px; color: #d0ccc5; }
+.intro-text strong { color: var(--gold); font-weight: 500; }
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.program-card {
+  border: 1px solid #39352f;
+  padding: 30px 25px;
+  background: #151515;
+}
+.program-card .number {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 32px;
+}
+.program-card h3 { font-size: 17px; font-weight: 500; }
+.program-card p { color: var(--gray); font-size: 13px; }
+.message {
+  background: #171717;
+  text-align: center;
+}
+.message h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+.message h2 span { color: var(--gold); }
+.message p { color: var(--gray); font-size: 14px; }
+.locations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.location-card {
+  padding: 35px;
+  border: 1px solid #39352f;
+}
+.location-card h3 { color: var(--gold); font-size: 22px; font-weight: 400; }
+.location-card p { color: var(--gray); font-size: 13px; }
+.trainer { background: #171717; }
+.trainer-inner { max-width: 700px; }
+.trainer-name { font-size: 26px; letter-spacing: 4px; }
+.trainer p { color: #c4c0b9; font-size: 14px; }
+.contact { text-align: center; }
+.contact p { color: var(--gray); font-size: 14px; }
+footer {
+  border-top: 1px solid #292929;
+  padding: 30px 8%;
+  text-align: center;
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+@media(max-width:700px) {
+  header { padding: 0 6%; }
+  nav { gap: 12px; font-size: 10px; }
+  .hero { min-height: 570px; padding: 90px 7%; }
+  section { padding: 75px 7%; }
+  .program-grid, .locations { grid-template-columns: 1fr; }
+  .program-card { padding: 25px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">RESET</a>
+  <nav>
+    <a href="#about">ABOUT</a>
+    <a href="#program">PROGRAM</a>
+    <a href="#location">LOCATION</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="eyebrow">PERSONAL TRAINING｜SAPPORO</div>
+  <h1>CHANGE YOUR<br><span>BODY,</span><br>CHANGE YOUR LIFE.</h1>
+  <div class="gold-line"></div>
+  <p>身体が変われば、日常が変わる。<br>そして、自分自身への自信が変わる。</p>
+  <a class="button" href="#contact">START YOUR RESET →</a>
+</section>
+
+<section class="intro" id="about">
+  <h2 class="section-title">ABOUT RESET</h2>
+  <div class="section-sub">私たちについて</div>
+  <div class="intro-text">
+    <p>RESETは、単に身体を鍛えるだけのパーソナルトレーニングではありません。</p>
+    <p>今までの生活習慣を一度リセットし、筋トレを通して新しい自分に出会う。</p>
+    <p>目指すのは、トレーナーに頼り続けることではなく、<strong>自分自身で身体を管理できるようになること。</strong></p>
+    <p>身体づくりの基礎から、トレーニング・食事・習慣まで。一人ひとりのペースに合わせてサポートします。</p>
+  </div>
+</section>
+
+<section id="program">
+  <h2 class="section-title">90 DAYS PROGRAM</h2>
+  <div class="section-sub">90日間の卒業プログラム</div>
+  <div class="program-grid">
+    <div class="program-card">
+      <div class="number">01</div>
+      <h3>FOUNDATION</h3>
+      <p>身体の使い方やトレーニングの基礎を習得。食事の基本も学び、自分の身体を知ることから始めます。</p>
+    </div>
+    <div class="program-card">
+      <div class="number">02</div>
+      <h3>BUILD & CHANGE</h3>
+      <p>目標に合わせてトレーニングと食事を調整。自分に合った身体づくりの方法を身につけます。</p>
+    </div>
+    <div class="program-card">
+      <div class="number">03</div>
+      <h3>GRADUATION</h3>
+      <p>自分でトレーニングメニューを組み、食事も管理できる状態へ。90日間の経験をこれからの習慣に。</p>
+    </div>
+  </div>
+</section>
+
+<section class="message">
+  <div class="eyebrow">OUR PHILOSOPHY</div>
+  <h2>教えられる、から<br><span>自立するへ。</span></h2>
+  <p>90日後、自分の力で続けられる身体づくりを。</p>
+</section>
+
+<section id="location">
+  <h2 class="section-title">LOCATION</h2>
+  <div class="section-sub">トレーニング場所</div>
+  <p style="color:#aaa;font-size:14px;margin-bottom:30px;">RESETはレンタルジムを利用したパーソナルトレーニングです。</p>
+  <div class="locations">
+    <div class="location-card">
+      <h3>ODORI</h3>
+      <p>大通エリア</p>
+      <p>地下鉄大通駅から徒歩約3分</p>
+      <p>札幌市中心部で通いやすい立地です。</p>
+    </div>
+    <div class="location-card">
+      <h3>ASABU</h3>
+      <p>麻生エリア</p>
+      <p>近隣に駐車場あり</p>
+      <p>生活スタイルに合わせてご利用いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<section class="trainer">
+  <div class="trainer-inner">
+    <h2 class="section-title">TRAINER</h2>
+    <div class="section-sub">代表トレーナー</div>
+    <div class="trainer-name">渡邊 魁</div>
+    <div class="gold-line"></div>
+    <p>身体づくりを通して、自分に自信を持てる人を増やしたい。</p>
+    <p>初心者の方にも分かりやすく、一人ひとりに合わせたトレーニングを提供します。</p>
+    <p>一時的な変化だけでなく、その先も続けられる習慣づくりを大切にしています。</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">CONTACT</h2>
+  <div class="section-sub">お問い合わせ</div>
+  <p>まずはお気軽にご相談ください。</p>
+  <p>トレーニングについてのご質問や体験のご相談も受け付けています。</p>
+  <a class="button" href="https://www.instagram.com/">INSTAGRAM →</a>
+</section>
+</main>
+
+<footer>
+  <div class="logo">RESET</div>
+  <p>PERSONAL TRAINING｜SAPPORO</p>
+  <p>© RESET. ALL RIGHTS RESERVED.</p>
+</footer>
+
+</body>
+</html>
