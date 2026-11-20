@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RESET｜パーソナルトレーニング</title>
 <meta name="description" content="RESETは札幌の大通・麻生を拠点とするパーソナルトレーニングサービスです。90日間で身体づくりの知識と習慣を身につけ、自分自身で身体を管理できる未来へ。">
+
 <style>
 :root {
   --black: #101010;
@@ -23,28 +23,31 @@ body {
   line-height: 1.9;
 }
 a { color: inherit; text-decoration: none; }
+
 header {
-  height: 76px;
-  padding: 0 8%;
+  min-height: 76px;
+  padding: 10px 8%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #292929;
 }
-.logo {
-  font-family: Georgia, serif;
-  font-size: 29px;
-  letter-spacing: 5px;
-  color: var(--gold);
+.logo img {
+  width: 125px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
 }
 nav { display: flex; gap: 30px; font-size: 12px; color: #ddd; }
+
 .hero {
   min-height: 650px;
   padding: 120px 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(90deg, #101010 0%, #101010e8 55%, #10101080 100%),
+  background:
+  linear-gradient(90deg, #101010 0%, #101010e8 55%, #10101080 100%),
   url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85") center/cover;
 }
 .eyebrow {
@@ -62,7 +65,12 @@ nav { display: flex; gap: 30px; font-size: 12px; color: #ddd; }
 }
 .hero h1 span { color: var(--gold); }
 .hero p { color: #ccc; font-size: 15px; }
-.gold-line { width: 55px; height: 1px; background: var(--gold); margin: 25px 0; }
+.gold-line {
+  width: 55px;
+  height: 1px;
+  background: var(--gold);
+  margin: 25px 0;
+}
 .button {
   display: inline-block;
   width: fit-content;
@@ -75,6 +83,7 @@ nav { display: flex; gap: 30px; font-size: 12px; color: #ddd; }
   transition: .3s;
 }
 .button:hover { background: var(--gold); color: #111; }
+
 section { padding: 100px 10%; }
 .section-title {
   font-family: Georgia, serif;
@@ -84,10 +93,16 @@ section { padding: 100px 10%; }
   letter-spacing: 3px;
   margin: 0 0 8px;
 }
-.section-sub { color: var(--gray); font-size: 11px; letter-spacing: 3px; margin-bottom: 45px; }
+.section-sub {
+  color: var(--gray);
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 45px;
+}
 .intro { background: #171717; }
 .intro-text { max-width: 720px; color: #d0ccc5; }
 .intro-text strong { color: var(--gold); font-weight: 500; }
+
 .program-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -105,6 +120,7 @@ section { padding: 100px 10%; }
 }
 .program-card h3 { font-size: 17px; font-weight: 500; }
 .program-card p { color: var(--gray); font-size: 13px; }
+
 .message {
   background: #171717;
   text-align: center;
@@ -117,23 +133,64 @@ section { padding: 100px 10%; }
 }
 .message h2 span { color: var(--gold); }
 .message p { color: var(--gray); font-size: 14px; }
+
 .locations {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 .location-card {
-  padding: 35px;
   border: 1px solid #39352f;
+  background: #151515;
+  padding-bottom: 25px;
+  overflow: hidden;
 }
-.location-card h3 { color: var(--gold); font-size: 22px; font-weight: 400; }
-.location-card p { color: var(--gray); font-size: 13px; }
+.location-card img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.location-card h3 {
+  color: var(--gold);
+  font-size: 22px;
+  font-weight: 400;
+  margin: 22px 30px 8px;
+}
+.location-card p {
+  color: var(--gray);
+  font-size: 13px;
+  margin: 5px 30px;
+}
+
 .trainer { background: #171717; }
-.trainer-inner { max-width: 700px; }
-.trainer-name { font-size: 26px; letter-spacing: 4px; }
-.trainer p { color: #c4c0b9; font-size: 14px; }
+.trainer-inner {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 45px;
+  align-items: center;
+}
+.trainer-photo {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+.trainer-content .section-sub { margin-bottom: 25px; }
+.trainer-name {
+  font-size: 26px;
+  letter-spacing: 4px;
+}
+.trainer p {
+  color: #c4c0b9;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
 .contact { text-align: center; }
 .contact p { color: var(--gray); font-size: 14px; }
+
 footer {
   border-top: 1px solid #292929;
   padding: 30px 8%;
@@ -142,20 +199,36 @@ footer {
   font-size: 11px;
   letter-spacing: 2px;
 }
+footer .logo img {
+  margin: 0 auto;
+}
+
 @media(max-width:700px) {
-  header { padding: 0 6%; }
+  header { padding: 10px 6%; }
+  .logo img { width: 95px; height: 42px; }
   nav { gap: 12px; font-size: 10px; }
   .hero { min-height: 570px; padding: 90px 7%; }
   section { padding: 75px 7%; }
   .program-grid, .locations { grid-template-columns: 1fr; }
   .program-card { padding: 25px; }
+  .trainer-inner {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .trainer-photo {
+    height: 400px;
+    max-width: 100%;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <a class="logo" href="#">RESET</a>
+  <a class="logo" href="#">
+    <img src="/reset-logo.png" alt="RESET">
+  </a>
   <nav>
     <a href="#about">ABOUT</a>
     <a href="#program">PROGRAM</a>
@@ -165,6 +238,7 @@ footer {
 </header>
 
 <main>
+
 <section class="hero">
   <div class="eyebrow">PERSONAL TRAINING｜SAPPORO</div>
   <h1>CHANGE YOUR<br><span>BODY,</span><br>CHANGE YOUR LIFE.</h1>
@@ -216,14 +290,18 @@ footer {
   <h2 class="section-title">LOCATION</h2>
   <div class="section-sub">トレーニング場所</div>
   <p style="color:#aaa;font-size:14px;margin-bottom:30px;">RESETはレンタルジムを利用したパーソナルトレーニングです。</p>
+
   <div class="locations">
     <div class="location-card">
+      <img src="/odori-gym.jpg" alt="大通エリアのトレーニングジム">
       <h3>ODORI</h3>
       <p>大通エリア</p>
       <p>地下鉄大通駅から徒歩約3分</p>
       <p>札幌市中心部で通いやすい立地です。</p>
     </div>
+
     <div class="location-card">
+      <img src="/asabu-gym.jpg" alt="麻生エリアのトレーニングジム">
       <h3>ASABU</h3>
       <p>麻生エリア</p>
       <p>近隣に駐車場あり</p>
@@ -234,13 +312,23 @@ footer {
 
 <section class="trainer">
   <div class="trainer-inner">
-    <h2 class="section-title">TRAINER</h2>
-    <div class="section-sub">代表トレーナー</div>
-    <div class="trainer-name">渡邊 魁</div>
-    <div class="gold-line"></div>
-    <p>身体づくりを通して、自分に自信を持てる人を増やしたい。</p>
-    <p>初心者の方にも分かりやすく、一人ひとりに合わせたトレーニングを提供します。</p>
-    <p>一時的な変化だけでなく、その先も続けられる習慣づくりを大切にしています。</p>
+    <img class="trainer-photo" src="/trainer.jpg" alt="RESET代表トレーナー 渡邊魁">
+
+    <div class="trainer-content">
+      <h2 class="section-title">TRAINER</h2>
+      <div class="section-sub">代表トレーナー</div>
+      <div class="trainer-name">渡邊 魁</div>
+      <div class="gold-line"></div>
+
+      <p>初めまして。RESET代表トレーナーの渡邊です。</p>
+      <p>私はこれまで約5年間、ボディメイクの仕事に携わってきました。</p>
+      <p>その中で、たくさんの知識を学び、多くの経験を積んできました。</p>
+      <p>そこで得た知識や経験を、今度は一人でも多くの方に届けたい。</p>
+      <p>そして、身体づくりを通して、たくさんの人に笑顔になってほしい。</p>
+      <p>そんな想いから、RESETを立ち上げました。</p>
+      <p>身体が変わることで、自分に自信が持てる。<br>毎日が少し楽しくなる。</p>
+      <p>RESETが、そのきっかけになれたら嬉しいです。</p>
+    </div>
   </div>
 </section>
 
@@ -251,10 +339,13 @@ footer {
   <p>トレーニングについてのご質問や体験のご相談も受け付けています。</p>
   <a class="button" href="https://www.instagram.com/">INSTAGRAM →</a>
 </section>
+
 </main>
 
 <footer>
-  <div class="logo">RESET</div>
+  <div class="logo">
+    <img src="/reset-logo.png" alt="RESET">
+  </div>
   <p>PERSONAL TRAINING｜SAPPORO</p>
   <p>© RESET. ALL RIGHTS RESERVED.</p>
 </footer>
