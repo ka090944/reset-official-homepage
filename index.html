@@ -1,17 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RESET｜パーソナルトレーニング</title>
-<meta name="description" content="RESETは札幌の大通・麻生を拠点とするパーソナルトレーニングサービスです。90日間で身体づくりの知識と習慣を身につけ、自分自身で身体を管理できる未来へ。">
+<title>RESET｜札幌のパーソナルトレーニング</title>
+<meta name="description" content="札幌のパーソナルトレーニングRESET。通常パーソナルと90日卒業プログラムで、身体づくりと自立をサポートします。">
 
 <style>
 :root {
   --black: #101010;
+  --panel: #171717;
   --gold: #c5a46d;
   --white: #f5f2ec;
   --gray: #aaa49a;
+  --line: #39352f;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -38,7 +41,13 @@ header {
   object-fit: contain;
   display: block;
 }
-nav { display: flex; gap: 30px; font-size: 12px; color: #ddd; }
+nav {
+  display: flex;
+  gap: 25px;
+  font-size: 12px;
+  color: #ddd;
+}
+nav a:hover { color: var(--gold); }
 
 .hero {
   min-height: 650px;
@@ -47,8 +56,8 @@ nav { display: flex; gap: 30px; font-size: 12px; color: #ddd; }
   flex-direction: column;
   justify-content: center;
   background:
-  linear-gradient(90deg, #101010 0%, #101010e8 55%, #10101080 100%),
-  url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85") center/cover;
+    linear-gradient(90deg, #101010 0%, #101010e8 55%, #10101080 100%),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85") center/cover;
 }
 .eyebrow {
   color: var(--gold);
@@ -65,6 +74,7 @@ nav { display: flex; gap: 30px; font-size: 12px; color: #ddd; }
 }
 .hero h1 span { color: var(--gold); }
 .hero p { color: #ccc; font-size: 15px; }
+
 .gold-line {
   width: 55px;
   height: 1px;
@@ -82,9 +92,12 @@ nav { display: flex; gap: 30px; font-size: 12px; color: #ddd; }
   letter-spacing: 2px;
   transition: .3s;
 }
-.button:hover { background: var(--gold); color: #111; }
+.button:hover {
+  background: var(--gold);
+  color: #111;
+}
 
-section { padding: 100px 10%; }
+section { padding: 95px 10%; }
 .section-title {
   font-family: Georgia, serif;
   color: var(--gold);
@@ -97,19 +110,26 @@ section { padding: 100px 10%; }
   color: var(--gray);
   font-size: 11px;
   letter-spacing: 3px;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
 }
-.intro { background: #171717; }
-.intro-text { max-width: 720px; color: #d0ccc5; }
-.intro-text strong { color: var(--gold); font-weight: 500; }
+.intro { background: var(--panel); }
+.intro-text {
+  max-width: 720px;
+  color: #d0ccc5;
+}
+.intro-text strong {
+  color: var(--gold);
+  font-weight: 500;
+}
 
+/* PROGRAM */
 .program-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 .program-card {
-  border: 1px solid #39352f;
+  border: 1px solid var(--line);
   padding: 30px 25px;
   background: #151515;
 }
@@ -118,11 +138,18 @@ section { padding: 100px 10%; }
   font-family: Georgia, serif;
   font-size: 32px;
 }
-.program-card h3 { font-size: 17px; font-weight: 500; }
-.program-card p { color: var(--gray); font-size: 13px; }
+.program-card h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
+.program-card p {
+  color: var(--gray);
+  font-size: 13px;
+}
 
+/* MESSAGE */
 .message {
-  background: #171717;
+  background: var(--panel);
   text-align: center;
 }
 .message h2 {
@@ -132,15 +159,215 @@ section { padding: 100px 10%; }
   line-height: 1.5;
 }
 .message h2 span { color: var(--gold); }
-.message p { color: var(--gray); font-size: 14px; }
+.message p {
+  color: var(--gray);
+  font-size: 14px;
+}
 
+/* PRICING */
+.pricing {
+  background: #111;
+}
+.pricing-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.pricing-heading .section-sub { margin-bottom: 0; }
+
+.price-block {
+  margin-bottom: 65px;
+}
+.price-block-title {
+  color: var(--gold);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.price-description {
+  color: var(--gray);
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.price-card {
+  position: relative;
+  text-align: center;
+  background: #191919;
+  border: 1px solid var(--line);
+  padding: 28px 12px;
+}
+.price-card.popular {
+  border: 1px solid var(--gold);
+  background: #211d17;
+}
+.popular-label {
+  display: inline-block;
+  color: #111;
+  background: var(--gold);
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 3px 12px;
+  margin-bottom: 12px;
+}
+.price-card h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 8px 0 12px;
+}
+.price-amount {
+  font-size: clamp(23px, 2.5vw, 31px);
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+.price-amount small {
+  font-size: 13px;
+}
+.price-per {
+  color: var(--gold);
+  font-size: 12px;
+  margin-top: 8px;
+}
+.price-note {
+  color: var(--gray);
+  font-size: 11px;
+  margin-top: 20px;
+}
+.option-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 28px;
+  border: 1px solid var(--gold);
+  margin-top: 22px;
+  background: #191919;
+}
+.option-box-title {
+  font-size: 15px;
+}
+.option-box p {
+  color: var(--gray);
+  font-size: 12px;
+  margin: 3px 0 0;
+}
+.option-price {
+  color: var(--gold);
+  font-size: 26px;
+  white-space: nowrap;
+}
+.option-price small { font-size: 12px; }
+
+/* 90 DAYS */
+.graduate-box {
+  border: 1px solid var(--gold);
+  background: linear-gradient(145deg, #211d17, #151515);
+  padding: 38px;
+}
+.graduate-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.graduate-top h3 {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0;
+}
+.graduate-price {
+  color: var(--gold);
+  font-size: 38px;
+  font-weight: 500;
+}
+.graduate-price small {
+  color: var(--white);
+  font-size: 13px;
+}
+.installment {
+  border: 1px solid #5a4a31;
+  padding: 14px 20px;
+  text-align: center;
+  margin-bottom: 28px;
+  color: var(--gray);
+  font-size: 13px;
+}
+.installment strong {
+  display: block;
+  color: var(--white);
+  font-size: 25px;
+}
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.support-item {
+  background: #171717;
+  padding: 20px 12px;
+  text-align: center;
+}
+.support-number {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+.support-item h4 {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+.support-item p {
+  color: var(--gray);
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 0;
+}
+.phase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 25px;
+}
+.phase-card {
+  border-top: 1px solid var(--gold);
+  padding: 18px 12px;
+}
+.phase-card h4 {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 500;
+}
+.phase-card p {
+  color: #ccc;
+  font-size: 12px;
+  margin: 5px 0;
+}
+.graduate-message {
+  text-align: center;
+  color: var(--gold);
+  font-size: 13px;
+  margin-top: 28px;
+}
+
+/* LOCATION */
 .locations {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 .location-card {
-  border: 1px solid #39352f;
+  border: 1px solid var(--line);
   background: #151515;
   padding-bottom: 25px;
   overflow: hidden;
@@ -163,21 +390,23 @@ section { padding: 100px 10%; }
   margin: 5px 30px;
 }
 
-.trainer { background: #171717; }
+/* TRAINER */
+.trainer { background: var(--panel); }
 .trainer-inner {
-  max-width: 850px;
+  max-width: 900px;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: minmax(250px, 350px) 1fr;
   gap: 45px;
   align-items: center;
 }
 .trainer-photo {
   width: 100%;
-  height: 420px;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  object-position: center top;
+  display: block;
 }
-.trainer-content .section-sub { margin-bottom: 25px; }
 .trainer-name {
   font-size: 26px;
   letter-spacing: 4px;
@@ -185,11 +414,15 @@ section { padding: 100px 10%; }
 .trainer p {
   color: #c4c0b9;
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
+/* CONTACT */
 .contact { text-align: center; }
-.contact p { color: var(--gray); font-size: 14px; }
+.contact p {
+  color: var(--gray);
+  font-size: 14px;
+}
 
 footer {
   border-top: 1px solid #292929;
@@ -203,22 +436,52 @@ footer .logo img {
   margin: 0 auto;
 }
 
+@media(max-width:900px) {
+  .price-grid { grid-template-columns: repeat(2, 1fr); }
+  .support-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media(max-width:700px) {
-  header { padding: 10px 6%; }
-  .logo img { width: 95px; height: 42px; }
-  nav { gap: 12px; font-size: 10px; }
-  .hero { min-height: 570px; padding: 90px 7%; }
+  header {
+    padding: 10px 5%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .logo img {
+    width: 95px;
+    height: 42px;
+  }
+  nav {
+    gap: 12px;
+    font-size: 10px;
+  }
+  .hero {
+    min-height: 570px;
+    padding: 90px 7%;
+  }
   section { padding: 75px 7%; }
-  .program-grid, .locations { grid-template-columns: 1fr; }
-  .program-card { padding: 25px; }
-  .trainer-inner {
+  .program-grid,
+  .locations,
+  .trainer-inner,
+  .phase-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
   }
+  .program-card { padding: 25px; }
+  .trainer-inner { gap: 25px; }
   .trainer-photo {
-    height: 400px;
-    max-width: 100%;
+    width: 100%;
+    max-height: none;
+    object-fit: contain;
   }
+  .price-grid { gap: 8px; }
+  .price-card { padding: 22px 8px; }
+  .graduate-box { padding: 22px 15px; }
+  .graduate-price { font-size: 31px; }
+  .option-box {
+    padding: 18px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .support-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -232,6 +495,7 @@ footer .logo img {
   <nav>
     <a href="#about">ABOUT</a>
     <a href="#program">PROGRAM</a>
+    <a href="#pricing">PRICE</a>
     <a href="#location">LOCATION</a>
     <a href="#contact">CONTACT</a>
   </nav>
@@ -286,6 +550,145 @@ footer .logo img {
   <p>90日後、自分の力で続けられる身体づくりを。</p>
 </section>
 
+<!-- PRICE -->
+<section class="pricing" id="pricing">
+  <div class="pricing-heading">
+    <h2 class="section-title">PRICE PLAN</h2>
+    <div class="section-sub">料金プラン</div>
+  </div>
+
+  <div class="price-block">
+    <h3 class="price-block-title">通常パーソナルプラン</h3>
+    <p class="price-description">トレーニングをメインとしたシンプルなプラン。あなたのペースで理想の身体をつくる。</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>単発プラン</h3>
+        <div class="price-amount">7,500<small>円</small></div>
+        <div class="price-per">1回あたり 7,500円</div>
+      </div>
+
+      <div class="price-card">
+        <h3>月4回プラン</h3>
+        <div class="price-amount">28,000<small>円</small></div>
+        <div class="price-per">1回あたり 7,000円</div>
+      </div>
+
+      <div class="price-card popular">
+        <div class="popular-label">POPULAR</div>
+        <h3>月8回プラン</h3>
+        <div class="price-amount">52,000<small>円</small></div>
+        <div class="price-per">1回あたり 6,500円</div>
+      </div>
+
+      <div class="price-card">
+        <h3>月12回プラン</h3>
+        <div class="price-amount">72,000<small>円</small></div>
+        <div class="price-per">1回あたり 6,000円</div>
+      </div>
+    </div>
+
+    <div class="option-box">
+      <div>
+        <div class="option-box-title">食事アドバイス（オプション）</div>
+        <p>食事のポイントや改善点をアドバイスします。</p>
+      </div>
+      <div class="option-price">＋5,000<small>円／月（税込）</small></div>
+    </div>
+
+    <p class="price-note">※通常プランはトレーニングをメインとしたプランです。食事管理・生活習慣改善などを含む総合的なサポートは90日卒業プログラムで対応しています。</p>
+  </div>
+
+  <div class="price-block">
+    <h3 class="price-block-title">RESET 90日卒業プログラム</h3>
+    <p class="price-description">90日で、身体も習慣もリセット。トレーナーに依存せず、自分で身体を変え続ける力を身につけるプログラム。</p>
+
+    <div class="graduate-box">
+      <div class="graduate-top">
+        <h3>RESET 90 DAYS<br>GRADUATION PROGRAM</h3>
+        <div class="graduate-price">120,000<small>円（税込）</small></div>
+      </div>
+
+      <div class="installment">
+        分割払いの場合
+        <strong>40,000円 × 3か月</strong>
+        月初のお支払い
+      </div>
+
+      <div class="support-grid">
+        <div class="support-item">
+          <div class="support-number">01</div>
+          <h4>パーソナルトレーニング指導</h4>
+          <p>週1回のマンツーマン指導</p>
+        </div>
+        <div class="support-item">
+          <div class="support-number">02</div>
+          <h4>毎日の食事管理</h4>
+          <p>LINEで毎日の食事をチェック</p>
+        </div>
+        <div class="support-item">
+          <div class="support-number">03</div>
+          <h4>目標に合わせた食事プラン</h4>
+          <p>無理なく続けられる食事指導</p>
+        </div>
+        <div class="support-item">
+          <div class="support-number">04</div>
+          <h4>自主トレ設計</h4>
+          <p>週1〜2回の自主トレメニューを作成</p>
+        </div>
+        <div class="support-item">
+          <div class="support-number">05</div>
+          <h4>進捗管理</h4>
+          <p>体重・見た目・食事・トレーニングを可視化</p>
+        </div>
+        <div class="support-item">
+          <div class="support-number">06</div>
+          <h4>睡眠の質向上サポート</h4>
+          <p>睡眠習慣の改善で回復力を高める</p>
+        </div>
+        <div class="support-item">
+          <div class="support-number">07</div>
+          <h4>生活習慣改善</h4>
+          <p>日常の行動・考え方までサポート</p>
+        </div>
+        <div class="support-item">
+          <div class="support-number">08</div>
+          <h4>卒業後サポート</h4>
+          <p>卒業後も自分で続けられるプランを作成</p>
+        </div>
+      </div>
+
+      <div class="phase-grid">
+        <div class="phase-card">
+          <h4>Phase 1｜基礎をつくる（1か月目）</h4>
+          <p>・身体の状態を把握</p>
+          <p>・トレーニング基礎習得</p>
+          <p>・食事の基礎を理解</p>
+          <p>・生活習慣の土台作り</p>
+        </div>
+        <div class="phase-card">
+          <h4>Phase 2｜変化をつくる（2か月目）</h4>
+          <p>・トレーニング強度アップ</p>
+          <p>・食事内容の最適化</p>
+          <p>・自主トレの習慣化</p>
+          <p>・睡眠の質を高める</p>
+        </div>
+        <div class="phase-card">
+          <h4>Phase 3｜自立する（3か月目）</h4>
+          <p>・自分でメニューを組む</p>
+          <p>・食事を自己管理する</p>
+          <p>・生活習慣を安定させる</p>
+          <p>・卒業後の継続プラン作成</p>
+        </div>
+      </div>
+
+      <div class="graduate-message">
+        トレーナーに依存せず、自分で身体を変え続けられる力を身につける90日間。
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="location">
   <h2 class="section-title">LOCATION</h2>
   <div class="section-sub">トレーニング場所</div>
@@ -314,7 +717,7 @@ footer .logo img {
   <div class="trainer-inner">
     <img class="trainer-photo" src="/trainer.jpg" alt="RESET代表トレーナー 渡邊魁">
 
-    <div class="trainer-content">
+    <div>
       <h2 class="section-title">TRAINER</h2>
       <div class="section-sub">代表トレーナー</div>
       <div class="trainer-name">渡邊 魁</div>
